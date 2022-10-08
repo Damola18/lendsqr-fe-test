@@ -1,0 +1,64 @@
+$main: #fff;
+$primary: #39CDCC;
+$secondary:#213F7D;
+$subcolor: #545F7D;
+$white: #fff;
+$black: #000;
+
+.userContainer {
+    position: relative;
+    left:110px;
+    flex: 1;
+    max-width: 100%;
+    max-height: 100%;
+    // padding:0 60px;
+    margin:10px 180px;
+    
+
+    h1 {
+        font-size: 24px;
+        font-weight: 500;
+        color:$subcolor;
+        padding:25px 0px;
+    }
+
+    .userheader {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        .card {
+            width:240px;
+            height:140px;
+            padding:30px 25px;
+            margin:10px;
+            background: $white;
+            border: 1px solid rgba(33, 63, 125, 0.06);
+            box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+            border-radius: 4px;
+
+            .text {
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color:$subcolor;
+            }
+            .num{
+                font-size: 24px;
+                font-weight: 600;
+                color:$secondary;
+            }
+        }
+        @media screen and (max-width:1092px) and (min-width: 768px){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width:768px){
+            display: grid;
+            gap:10px;
+            padding: 10px;
+
+           
+        }
+    }
+}
