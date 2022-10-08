@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+// // COLORS 
+// $primary: #39CDCC;
+// $seondary:#213F7D;
+
+// FONT
+$font: "Work sans", "sans-serif";
+
+// .App {
+//     margin:"15px";
+//     font-family: $font;
+//     background-color: $primary;
+// }
+
+// // Styling for login
+// .container {
+//     margin:"20px"
+// }
+
+.App {
+    font-family: $font;
+}
+a {
+    text-decoration: none;
+}

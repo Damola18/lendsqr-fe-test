@@ -1,0 +1,23 @@
+$main: #fff;
+$primary: #39CDCC;
+$secondary:#213F7D;
+$subcolor: #545F7D;
+$white: #fff;
+$black: #000;
+
+// FONT SIZES 
+$medium: 40px;
+$small: 60px;
+
+.nav {
+    width: 100%;
+    background:$white;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    
+    display: flex;
+  
+    .logo {
+        margin: 30px;
+
+    }
+}
