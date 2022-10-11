@@ -1,0 +1,206 @@
+$main: #fff;
+$primary: #39CDCC;
+$secondary:#213F7D;
+$subcolor: #545F7D;
+$white: #fff;
+$black: #000;
+$danger : #e4033b;
+
+
+.detailsContainer {
+    position: relative;
+    left:95px;
+    padding: 150px 165px;
+
+    .back  a {
+        color: $subcolor;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 10px;
+
+        
+        
+    }
+    .profile {
+        width: 100%;
+        display: flex;
+        padding:30px 0px;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            font-size: 24px;
+            color:$secondary;
+            font-weight: 500;
+            display: flex;
+            float: left;
+        }
+        
+
+        .btn {
+            display: flex;
+            float: right;
+
+            button {
+                background: none;
+                width: 170px;
+                height:40px;
+                outline: none;
+                border-radius: 8px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 14px;
+                cursor: pointer;
+                margin-left:20px;
+            }
+
+          
+
+            .blacklist {
+                color:$danger;
+                border: 1px solid $danger;
+            }
+
+            .activate {
+                border: 1px solid $primary;
+                color: $primary;
+            }
+        }
+       
+    }
+
+    .general {
+        max-width: 100%;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+
+        // display: flex;
+        // justify-content: space-between;
+        // flex-direction: row;
+
+        .info {
+            display: flex;
+            align-items: center;
+            padding:30px;
+
+            .avatar{
+                width: 100px;
+                height: 100px;
+                background: rgb(33, 63, 125, 0.16);
+                border-radius: 100px;
+
+                    
+                img {
+                    display: flex;
+                    justify-content: center;
+                    padding:25px;
+                
+                }
+            }
+
+            .name {
+                padding: 0px 30px;
+
+                p:nth-child(1){
+                    font-size: 22px;
+                    font-weight: 600;
+                    color:$secondary;
+                }
+
+                p:nth-child(2){
+                    position: relative;
+                    font-size: 14px;
+                    bottom: 12px;
+                    font-weight: 400;
+                    color:$secondary
+                }
+            }
+
+            .rating {
+                padding: 0 30px;
+
+                p {
+                    font-weight: 500;
+                    color:$secondary
+                }
+            }
+
+            .amount {
+                padding:0 30px;
+
+                p:nth-child(1){
+                    font-size: 22px;
+                    font-weight: 500;
+                    color:$secondary;
+
+                }
+
+                p:nth-child(2){
+                    font-size: 12px;
+                    font-weight: 400;
+                    color:$secondary;
+                }
+            }
+        }
+
+        
+    }
+   
+    .personal {
+        position: relative;
+        top:30px;
+        padding-bottom: 30px;
+        max-width: 100%;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+
+        h3 {
+            padding:10px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color:$secondary;
+        }
+        .info {
+            display: flex;
+            align-items: center;
+            padding:10px 30px;
+
+            .person  {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-start;
+                flex-wrap: wrap;
+                border-bottom: 1px solid rgb(33, 63, 125, 0.1);
+                
+
+                .data {
+                    margin: 0px 100px 0px 0px;
+                    color:$secondary;
+
+                    p:nth-child(1) {
+                        text-transform: uppercase;
+
+                    }
+                    p:nth-child(2){
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            
+           
+        }
+
+       
+        
+        
+    }
+}

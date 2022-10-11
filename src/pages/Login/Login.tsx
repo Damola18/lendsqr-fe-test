@@ -3,6 +3,10 @@ import "./login.scss";
 import logo from "../../assets/images/logo.svg"
 import loginImage from "../../assets/images/loginimage.png"
 
+interface ILoginData {
+    email : string;
+    password: string
+}
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     
@@ -44,8 +48,9 @@ const Login = () => {
                             FORGOT PASSWORD ?
                         </div>
 
-                        <button className="btn">
-                            LOG IN
+                        
+                        <button className="btn" >
+                            <a href="/users">LOG IN</a>
                         </button>
                     </form>
                 </div>

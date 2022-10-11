@@ -1,12 +1,12 @@
-import React from 'react'
-
 // components imports
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/SidebarDetails/Sidebar'
 import TableData from '../../components/UserDataTable/TableData'
 
+// import countriesData from "../../data/countries.js"
 // style imports
 import "./user.scss"
+
 const userDataContent = [ 
   {
     img:"https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219478/Lendsqr/icons/users_ly86vq.svg",
@@ -28,7 +28,7 @@ const userDataContent = [
     title:"USERS WITH SAVINGS",
     number:"102,453"
   },
-  ]
+]
 
 const UserDataContainer = () => {
   return (
@@ -46,6 +46,7 @@ const UserDataContainer = () => {
 
 
 const User = () => {
+ // const [countries] = useState([...countriesData])
   return (
     <>
         <Navbar/>
@@ -55,7 +56,7 @@ const User = () => {
 
             <UserDataContainer/>
 
-            <TableData/>
+            <TableData />
         </div>
     </>
     

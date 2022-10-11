@@ -1,0 +1,63 @@
+$main: #fff;
+$primary: #39CDCC;
+$secondary:#213F7D;
+$subcolor: #545F7D;
+$white: #fff;
+$black: #000;
+
+
+.tableData {
+    margin:33px 10px;
+    max-width: 100%;
+    max-height: 100%;
+    background: $white;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+}
+
+thead {
+    width: 100%;
+    
+    th{
+        max-width: max-content;
+        white-space: nowrap;
+        position: relative;
+        padding: 10px;
+        font-size: 12px;
+        color:$subcolor;
+        text-align: left;
+
+        span {
+            position: relative;
+            top:4px;
+            padding: 15px 5px;
+        }
+    }
+
+}
+
+tbody{
+    padding:20px 10px;
+    text-align: center;
+
+    td {
+        padding: 13px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .employed {
+        color:#39CD62;
+        font-weight: 400;
+        font-size: 14px;
+        padding:5px;
+        background: rgb(57, 205, 98, 0.06);
+        border-radius: 100px;
+
+    }
+
+    .unemployed {
+        color: red
+    }
+}

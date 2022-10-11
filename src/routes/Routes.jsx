@@ -1,5 +1,6 @@
 import Login from '../pages/Login/Login'
 import User from '../pages/User/User'
+import UserDetail from '../pages/UserDetail/UserDetail';
 
 const routes = [
     {
@@ -13,8 +14,8 @@ const routes = [
     },
 
     {
-        path: "/users/:id",
-        component: User
+        path: "/userdetail",
+        component: UserDetail
 
     }
 ]

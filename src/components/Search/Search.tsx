@@ -1,16 +1,16 @@
 import React from 'react'
-import {GrSearch} from "react-icons/gr"
 // style imports 
 import "./search.scss"
 
+// import SearchIcon from "../""
 const Search = () => {
   return (
     <div className="searchcontainer">
         <div className="search">
-            <input type="text" placeholder="Search for anything"/>
-            <button className="search-btn">
-                <span><GrSearch/></span>
-            </button>
+            <input type="text" placeholder="Search for anything" className='search'/>
+            <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219551/Lendsqr/icons/search_gecqfw.svg" 
+                className="image"
+                />
         </div>
     </div>
   )

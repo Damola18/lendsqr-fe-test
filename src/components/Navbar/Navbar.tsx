@@ -5,18 +5,28 @@ import "./navbar.scss"
 
 // page imports 
 import Search from "../Search/Search"
-// assets imports
-import logo from "../../assets/images/logo.svg"
 const Navbar = () => {
   return (
     <div className='nav'>
-        <img src = {logo} className='logo' alt="" />
+        <img src = "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665389154/Lendsqr/images/logo_n6nigj.svg" className='logo' alt="" />
 
         <Search/>
 
-        <div className="info">
+        {/* <div className="info">
+            <p> Docs </p>
 
-        </div>
+            <div>
+            <span>
+                <img src = "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219471/Lendsqr/icons/switch_lpvjfz.svg" alt="" />
+            </span>
+            </div>
+            <div>
+            <span>
+                <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219471/Lendsqr/icons/switch_lpvjfz.svg" alt="" />
+            </span>
+            </div>
+          
+        </div> */}
 
     </div>
   )
