@@ -23,3 +23,10 @@ $font: "Work sans", "sans-serif";
 a {
     text-decoration: none;
 }
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor:pointer
+}

@@ -102,44 +102,51 @@ $small: 60px;
                     max-width: 540px;
                     height:35px;
                     outline:none;
-                    background: transparent;
+                    background: none;
                     padding: 0px 15px;
                     font-weight: 400px;
-
-                    ::placeholder {
-                        ::placeholder,
-                        ::-webkit-input-placeholder {
-                            color: red;
-                            font-weight: 400px;
-
-                        }
-                    }
-
-                    // :-webkit-autofill :{
-                    //     -webkit-box-shadow: 0 0 0 30px white inset !important;
-                    // }
                    
+                }
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover, 
+                input:-webkit-autofill:focus,
+                textarea:-webkit-autofill,
+                textarea:-webkit-autofill:hover,
+                textarea:-webkit-autofill:focus,
+                select:-webkit-autofill,
+                select:-webkit-autofill:hover,
+                select:-webkit-autofill:focus {
+                -webkit-text-fill-color: $subcolor;
+                box-shadow: 0 0 0px 1000px #fff inset;
+                transition: background-color 5000s ease-in-out 0s;
                 }
 
                 .pwd-btn {
                     position: absolute;
                     right: 75px;
-                    bottom: 41%;
+                    bottom: 43%;
                     background: none;
                     border: none;
                     outline: none;
-                    color: #39CDCC;
+                    color: $primary;
                     cursor: pointer;
+
+                    @media screen and (max-width: 768px) {
+                        right: 75px;
+                        bottom:-7%;
+                    }
                 }
 
 
                 .forget-password {
                     margin:20px 0px;
-                    font-size: small;
-                    font-weight: 500;
+                    font-size: 12px;
+                    font-weight: 600;
                     text-align: left;
                     color:$primary;
                     cursor: pointer;
+
+                    
                 }
 
               

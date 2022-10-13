@@ -3,8 +3,6 @@ import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/SidebarDetails/Sidebar'
 import TableData from '../../components/UserDataTable/TableData'
 
-// import countriesData from "../../data/countries.js"
-// style imports
 import "./user.scss"
 
 const userDataContent = [ 

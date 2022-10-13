@@ -1,47 +1,81 @@
 import "./userdetails.scss";
+// import { addDatatoLocalStorage } from "../../data/countries";
+import { useState, useEffect } from "react";
+import { BASE_URL } from "../../config/api";
+
 const UserDetails = () => {
+  const [ localData, setLocalData] = useState<any[]>([]);
+  const userId = document.location.pathname.split("/")[2]
+  const [userList, setUserList] = useState(null)
+ 
 
-  const UserDetails = () => {
-    return ( 
-      <div className='general'>
-        <div className="info">
+  const addDatatoLocalStorage = async function() {
+    try {
+      const data = await 
+        fetch(BASE_URL)
+        .then(res => res?.json())
+        
+        localStorage.setItem("userTable", JSON.stringify(data))
+        const userData = localStorage.getItem("userTable");
+        const userTable = userData !== null ? JSON.parse(userData) : []   
+        setLocalData(userTable);
+        setUserList(userTable);
+        
 
-            <div className="avatar">
-              <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/userIcon_jhxo4d.svg" alt="avatar" />
-            </div>
-
-            <div className="name">
-              <p>Grace Effiom</p>
-              <p>LSQFf587g90</p>
-            </div>
-
-          <img src ="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665418353/Lendsqr/icons/Divider_lap7ni.svg" alt="divider"/>
-
-            
-          <div className="rating">
-            <p>User's Tier</p>
-            <span>
-              <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/star_my8xjh.svg" alt="star"/>
-              <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/star_my8xjh.svg" alt="star"/>
-              <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/star_my8xjh.svg" alt="star"/>
-            </span>
-            
-          </div>
-
-          <img src ="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665418353/Lendsqr/icons/Divider_lap7ni.svg" alt="divider"/>
-
-          <div className="amount">
-            <p>#200,000</p>
-            <p>99123456789/Providus Bank</p>
-          </div>
-        </div>
-      </div>
-    )
+    }
+    catch(error){
+      console.log(error)
+    }
   }
 
-  const PersonalInformation = () => {
-    return (
-      <div className="personal">
+
+ 
+
+  useEffect(() => {
+    addDatatoLocalStorage();
+    // let newUser = userList.filter.
+  }, [userId, localData])
+
+  const UserLists = window.localStorage.getItem("userTable")
+  console.log(UserLists?.length);
+ 
+  const PersonalDetail = ({}) => {
+    return ( 
+      <>
+        <div className='general'>
+        <div className="info">   
+          <div className="avatar">
+            <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/userIcon_jhxo4d.svg" alt="avatar" />
+          </div>
+
+          <div className="name">
+              <p>Grace</p>
+              <p>LSQFf587g90</p>
+          </div>
+
+          <img src ="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665418353/Lendsqr/icons/Divider_lap7ni.svg" alt="divider"/>
+
+          
+            <div className="rating">
+              <p>User's Tier</p>
+              <span>
+                <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/star_my8xjh.svg" alt="star"/>
+                <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/star_my8xjh.svg" alt="star"/>
+                <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/star_my8xjh.svg" alt="star"/>
+              </span>
+              
+            </div>
+
+            <img src ="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665418353/Lendsqr/icons/Divider_lap7ni.svg" alt="divider"/>
+
+            <div className="amount">
+              <p>#200,000</p>
+              <p>99123456789/Providus Bank</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="personal">
         <h3>Personal Information</h3>
         <div className="info">
           <div className="person">
@@ -174,7 +208,7 @@ const UserDetails = () => {
           </div>
         </div>
 
-        <h3></h3>
+        <h3>""</h3>
         <div className="info">
           <div className="person">
             <div className="data">
@@ -200,17 +234,31 @@ const UserDetails = () => {
           </div>
         </div>
 
-      </div>
+        </div>
+      </>
+     
     )
   }
+
+  // const PersonalInformation = () => {
+  //   return (
+     
+  //   )
+  // }
   return (
     <div className='detailsContainer'>
+      
       <div className='back'>
           <a href="/users">
             <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665401742/Lendsqr/icons/ArrowBack_hgulid.svg" alt='back_icon'/>
             <span>
               Back to Users
             </span>
+
+            {/* <button onClick={() => getDataFromLocal}>
+              Local Storage
+              <a href="/userDetail"/>
+            </button> */}
           </a>
    
       </div>
@@ -227,9 +275,9 @@ const UserDetails = () => {
         </div>
       </div>
 
-      <UserDetails/>
+      <PersonalDetail/>
 
-      <PersonalInformation/>
+      {/* <PersonalInformation/> */}
       
     </div>
   )

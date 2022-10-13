@@ -1,7 +1,5 @@
 
-import React, {useState} from 'react'
-
-
+import {FaAngleDown} from "react-icons/fa"
 import "./sidebar.scss";
 
 
@@ -9,15 +7,17 @@ const sidebarMenu = [
   {
     section:"",
     menu: [
-      {
-        name:"Switch Organization",
-        link: "",
-        icon: "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219471/Lendsqr/icons/switch_lpvjfz.svg"
-      },
+      // {
+      //   name:"Switch Organization" ,
+      //   link: "",
+      //   icon: "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219471/Lendsqr/icons/switch_lpvjfz.svg",
+      //   icon2: "",
+      // },
       {
         name:"Dashboard",
         link:"/",
-        icon: "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219478/Lendsqr/icons/dashboard_cgns92.svg"
+        icon: "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219478/Lendsqr/icons/dashboard_cgns92.svg",
+        icon2: "",
       }
     ]
   },
@@ -27,11 +27,11 @@ const sidebarMenu = [
     menu: [
       {
         name:"Users",
-        link:"",
+        link:"/users",
         icon: "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665227276/Lendsqr/icons/user-friends_1_kn9bfh.svg"
       }, 
       {
-        name:"Guarantors",
+        name:"Guarantors ",
         link:"",
         icon: "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219459/Lendsqr/icons/Guarantors_sg2sxt.svg"
       },
@@ -161,14 +161,19 @@ const sidebarMenu = [
 //   style: React.CSSProperties;
 // }
 
- 
-// const Sidebar = ({route} : {route:any}) => {
+
 const Sidebar = () => {
-  const [search, searchData] = useState();
   return (
     <div className="sidebar">
-      {sidebarMenu.map(item => 
-        <div className="header" key={item.section}>
+      <div className='header'>
+        <a href="/">
+          <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665219471/Lendsqr/icons/switch_lpvjfz.svg" className="icon" alt="icon"/>
+          <span>Switch Organization</span>
+          <span style={{paddingLeft:"10px", paddingTop:"3px" }}><FaAngleDown/></span>
+        </a>
+      </div>
+      {sidebarMenu.map((item, i) => 
+        <div className="header" key={i}>
           <p>{item.section}</p>
             {item.menu.map( menus => (
               <a href={menus.link} key={menus.name}>

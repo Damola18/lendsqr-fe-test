@@ -1,13 +1,23 @@
+$main: #fff;
+$primary: #39CDCC;
+$secondary:#213F7D;
+$subcolor: #545F7D;
+$white: #fff;
+$black: #000;
+
 .pagination {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .pageSection {
-        margin: 10px;
+        margin:10px;
         display: flex;
         align-items: center;
         
+        // @media(max-width: 1000px) {
+        //     flex-direction: column;
+        // }
         // p {
         //    color:#213F7D;
             
@@ -29,23 +39,36 @@
 
     .controls {
         display: flex;
-       
-        margin:10px;
+        align-items: center;
+        padding:0 12px;
+
 
         button {
-            background: transparent;
-            color: transparent;
-            border: none;
-            outline: none;
+            color: $subcolor;
+
+            &:active {
+                color: red;
+                
+            }
+
+            &:nth-of-type(1),
+            &:last-of-type {
+                width: 24px;
+                height: 24px;
+                background: #545F7D15;
+                color: #545F7D;
+                border-radius: 4px;
+            }
+
         }
         img {
-            cursor: pointer;
-            background: rgba(33, 63, 125, 0.1);
+            cursor: pointer; 
             border-radius: 4px;
             border:none;
             outline: none;
-            padding: 5px;
-            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

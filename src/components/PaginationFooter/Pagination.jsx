@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import "./pagination.scss";
+
 const Pagination = (props) => {
-  const {page, setPage, pagesCount, records, setPagesCount} = props;
+  const {page, setPage, pageCounts, records, setPageCount} = props;
   const [controls, setControls] = useState([])
 
   const prevControl = () => {
@@ -11,28 +12,30 @@ const Pagination = (props) => {
   }
 
   const nextControl = () => {
-    if (page < (Math.ceil(records/ pagesCount ) -1 )){
+    if (page < (Math.ceil(records/ pageCounts ) -1 )){
       setPage(page + 1)
     }
   }
 
   const handleCounts = (e) => {
     setPage(0);
-    setPagesCount(parseInt(e.target.value))
+    setPageCount(parseInt(e.target.value))
   }
 
   useEffect(() => {
     let temps = []
-    for(let i = 0; i < Math.ceil(records/ pagesCount); i++) {
+    for(let i = 0; i < Math.ceil(records/pageCounts); i++) {
       temps.push(i);
     }
     setControls(temps);
-  }, [pagesCount, records])
+  }, [pageCounts, records])
+
   return (
     <div className='pagination'>
       <div className="pageSection">
         <p>Showing</p>
-        <select defaultValue={pagesCount} onClick={handleCounts}>
+        <select defaultValue={pageCounts} onClick={handleCounts}>
+        <option value={5}>5</option>
           <option value={10}>10</option>
           <option value={20}>20</option>
           <option value={50}>50</option>
@@ -45,19 +48,19 @@ const Pagination = (props) => {
         <button onClick={prevControl}>
           <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665371976/Lendsqr/icons/prev-icon_red3cz.svg" alt="prev"/>
         </button>
-        {controls.slice(0,3).map(item => (
+        {controls.slice(1,4).map(item => (
           <button key={item} onClick={() => setPage(item)} className={item === "page" ? "acitve" : "" }>
             {item}
           </button>
         ))}
         {
-          (Math.ceil(records/ pagesCount)) > 5 &&
+          (Math.ceil(records/ pageCounts)) > 7 &&
           <span>...</span>
         }
         { 
-          controls.length > 5 ?
-          controls.slice(controls.length - 3, controls.length).map(item => (
-            <button key={item} onClick={()  => setPage(item)} className={item === "page" ? "acitve" : "" }>
+          controls.length > 7 ?
+          controls.slice(controls.length - 1, controls.length).map(item => (
+            <button key={item} onClick={()  => setPage(item)} className={item === page ? "acitve" : "" }>
               {item}
             </button>
           ))

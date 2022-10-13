@@ -1,0 +1,63 @@
+$main: #fff;
+$primary: #39CDCC;
+$secondary:#213F7D;
+$subcolor: #545F7D;
+$white: #fff;
+$black: #000;
+
+
+tr {
+    position: relative;
+    height:80px;
+}
+td {
+    padding: 13px;
+    font-size: 14px;
+    text-align: left;
+    
+    button {
+
+        .img {
+            color:$subcolor;
+        }
+    }
+    .kebabMenu {
+        position: absolute;  
+        right:30px;
+        background: $white;
+        border: 1px solid #545f7d1d;
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        padding: 20px 30px;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        
+        
+        a {
+            font-weight: 500;
+            font-size: 14px;
+            color: $subcolor;
+            margin:10px 0px;
+            align-items: center;
+
+            span{
+                margin:10px 5px;        
+            }
+        }
+    }
+}
+
+.employed {
+    color:#39CD62;
+    font-weight: 400;
+    font-size: 14px;
+    padding:5px;
+    background: rgb(57, 205, 98, 0.06);
+    border-radius: 100px;
+
+}
+
+.unemployed {
+    color: red
+}

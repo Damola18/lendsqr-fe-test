@@ -1,30 +1,28 @@
-import React , {useState}from 'react'
+import {useState}from 'react'
 import "./login.scss";
-import logo from "../../assets/images/logo.svg"
-import loginImage from "../../assets/images/loginimage.png"
 
-interface ILoginData {
-    email : string;
-    password: string
-}
-const Login = () => {
+
+const Login = () => {    
     const [showPassword, setShowPassword] = useState(false);
+   // const [loading, setLoading] = useState(false)
+
     
     const pwdChange = (e: any) => {
         e.preventDefault();
         setShowPassword(!showPassword);
     }
-
+    
+   
     return (
-
+        // { loading }
         <div className="container">
             <a href="/">
-                <img src = {logo}/>
+                <img src = "https://res.cloudinary.com/dutcp8qkx/image/upload/v1665389154/Lendsqr/images/logo_n6nigj.svg" alt="logo"/>
             </a>
 
             <div className="login">
                 <div className='loginImage'>
-                    <img src={loginImage} alt="Login Illustration" className='img'/>
+                    <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1665389097/Lendsqr/images/loginimage_bmpfvh.png" alt="Login Illustration" className='img'/>
                 </div>
 
                 <div className="loginform">
@@ -37,11 +35,11 @@ const Login = () => {
                         </div>
 
                         <div className="field">
-                            <input type={showPassword ? "text" : "password" }placeholder="Password" />
+                            <input type={showPassword ? "text" : "password" } placeholder="Password" />
                             <button onClick={pwdChange} className="pwd-btn">
-                             { showPassword ? <span>HIDE</span>  : <span>SHOW</span>  }
+                            { showPassword ? <span>HIDE</span>  : <span>SHOW</span>  }
                             </button>
-                           
+                        
                         </div>
 
                         <div className='forget-password'>
