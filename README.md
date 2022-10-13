@@ -4,11 +4,11 @@
 This assessment was completed using the following technologies
 
 Languages - [ React, Typescript]
-CSS - SCSS
-Icons - React-icons
-Assets Hosting - Used [Cloudinary](https://cloudinary.com) in order to optimise performance
-Testing - Jest
-Deployment - Netlify
+* CSS - SCSS
+* Icons - React-icons
+* Assets Hosting - Used [Cloudinary](https://cloudinary.com) in order to optimise performance
+* Testing - Jest
+* Deployment - Netlify
 
 ## Usage
  LOGIN
