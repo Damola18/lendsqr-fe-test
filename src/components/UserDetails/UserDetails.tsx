@@ -20,7 +20,6 @@ const UserDetails = () => {
         const userTable = userData !== null ? JSON.parse(userData) : []   
         setLocalData(userTable);
         setUserList(userTable);
-        console.log(userList)
 
     }
     catch(error){
@@ -34,7 +33,7 @@ const UserDetails = () => {
 
   useEffect(() => {
     addDatatoLocalStorage();
-  }, [userId, localData])
+  }, [])
 
   
   const PersonalDetail = ({}) => {
@@ -206,7 +205,7 @@ const UserDetails = () => {
           </div>
         </div>
 
-        <h3>""</h3>
+        <h3></h3>
         <div className="info">
           <div className="person">
             <div className="data">
