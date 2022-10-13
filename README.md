@@ -1,4 +1,4 @@
-📝# Lendsqr Frontend Engineer Assessment
+📝 Lendsqr Frontend Engineer Assessment
 
 ## Introduction
 This assessment was completed using the following technologies
