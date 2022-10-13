@@ -1,10 +1,10 @@
-📝 <h1>Lendsqr Frontend Engineer Assessment</h1>
+<h1>Lendsqr Frontend Engineer Assessment</h1>
 
 ## Introduction
 This assessment was completed using the following technologies
 
-Languages - [ React, Typescript]
-* CSS - SCSS
+* Languages - [ React, Typescript]
+* Styling - SCSS
 * Icons - React-icons
 * Assets Hosting - Used [Cloudinary](https://cloudinary.com) in order to optimise performance
 * Testing - Jest
