@@ -44,7 +44,8 @@ const TableData = () => {
         setToggleFilter(!toggleFilter)
     }
 
-    
+    const stats = tableDetails.length;
+    console.log(stats)
     return (
        
         <>

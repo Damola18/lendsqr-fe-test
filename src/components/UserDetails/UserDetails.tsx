@@ -20,7 +20,7 @@ const UserDetails = () => {
         const userTable = userData !== null ? JSON.parse(userData) : []   
         setLocalData(userTable);
         setUserList(userTable);
-        
+        console.log(userList)
 
     }
     catch(error){
@@ -28,17 +28,15 @@ const UserDetails = () => {
     }
   }
 
+ 
 
  
 
   useEffect(() => {
     addDatatoLocalStorage();
-    // let newUser = userList.filter.
   }, [userId, localData])
 
-  const UserLists = window.localStorage.getItem("userTable")
-  console.log(UserLists?.length);
- 
+  
   const PersonalDetail = ({}) => {
     return ( 
       <>
