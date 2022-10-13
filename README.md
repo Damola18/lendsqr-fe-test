@@ -24,5 +24,17 @@ This assessment was completed using the following technologies
 - Due to time constraint, the search option was only designed, I couldnt write the functionality.
 
 ### Page Snapshots
-Login_mobile_screen.jpg
-Login_desktop_screen.jpg
+Login Mobile View<br/>
+![Login_mobile_screen](https://user-images.githubusercontent.com/50779080/195724206-f29b940e-ac33-46d0-a4ca-62168ee323a2.jpg)
+
+Login Deaktop View
+
+![Login_desktop_screen](https://user-images.githubusercontent.com/50779080/195724393-a97c06b8-446d-4b0a-8569-15eea1ad714c.jpg)
+
+User View Showing the table filters and side menu
+![User_view](https://user-images.githubusercontent.com/50779080/195724690-00b0345f-1957-4f4b-8e3a-61f4555c4623.jpg)
+
+User view showing the pagination and select range feature
+
+![user_view2](https://user-images.githubusercontent.com/50779080/195725046-833fefec-4461-4196-976f-a93d75636ac9.jpg)
+
