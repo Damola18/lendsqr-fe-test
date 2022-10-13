@@ -23,5 +23,6 @@ This assessment was completed using the following technologies
 - The filters where implemented
 - Due to time constraint, the search option was only designed, I couldnt write the functionality.
 
-
-
+### Page Snapshots
+Login_mobile_screen.jpg
+Login_desktop_screen.jpg
