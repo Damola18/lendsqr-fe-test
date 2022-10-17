@@ -38,3 +38,6 @@ User view showing the pagination and select range feature
 
 ![user_view2](https://user-images.githubusercontent.com/50779080/195725046-833fefec-4461-4196-976f-a93d75636ac9.jpg)
 
+ User Details for each users
+ <img width="879" alt="image" src="https://user-images.githubusercontent.com/50779080/196228940-279a92de-060e-4d71-a183-5fa4ab8fa945.png">
+
